@@ -17,6 +17,10 @@ app.register(fastifyJWT, {
   secret: env.JWT_SECRET
 })
 
+app.get('/', (_, reply) => {
+  reply.status(200).send({ message: 'ok' })
+})
+
 app.register(enterprisesRoutes, { prefix: '/enterprises' })
 app.register(postsRoutes, { prefix: '/posts' })
 app.register(sessionsRoutes)
