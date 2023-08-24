@@ -17,7 +17,7 @@ app.register(fastifyJWT, {
   secret: env.JWT_SECRET
 })
 
-app.get('/', (_, reply) => {
+app.get('/ok', (_, reply) => {
   reply.status(200).send({ message: 'ok' })
 })
 
