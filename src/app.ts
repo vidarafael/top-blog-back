@@ -8,7 +8,6 @@ import { env } from './env'
 import { sessionsRoutes } from './http/controllers/session/routes'
 
 const app = fastify()
-
 app.register(cors, { 
   origin: '*'
 })
